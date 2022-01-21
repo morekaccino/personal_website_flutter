@@ -100,6 +100,19 @@ class _InfoCardWidgetState extends State<InfoCardWidget> {
                           color: Colors.black54,
                         ),
                       ),
+                      IconButton(
+                        onPressed: () async {
+                          await analytics.logEvent(
+                              name: "linksClicked",
+                              parameters: {'social': 'Telegram'});
+                          html.window
+                              .open('http://t.me/morekaccino', "_blank");
+                        },
+                        icon: const Icon(
+                          SimpleIcons.telegram,
+                          color: Colors.black54,
+                        ),
+                      ),
                     ],
                   )
                 ],
