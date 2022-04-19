@@ -1,9 +1,9 @@
 import 'dart:ui';
-import 'dart:html' as html;
 
 import 'package:firebase_analytics/firebase_analytics.dart';
 import 'package:flutter/material.dart';
 import 'package:simple_icons/simple_icons.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class InfoCardWidget extends StatefulWidget {
   const InfoCardWidget({Key? key}) : super(key: key);
@@ -35,7 +35,7 @@ class _InfoCardWidgetState extends State<InfoCardWidget> {
               width: 400.0,
               height: 400.0,
               decoration: BoxDecoration(
-                color: Colors.grey.shade200.withOpacity(0.5),
+                color: Colors.grey.shade200.withOpacity(0.4),
                 borderRadius: _radius,
               ),
               child: Column(
@@ -65,8 +65,8 @@ class _InfoCardWidgetState extends State<InfoCardWidget> {
                           await analytics.logEvent(
                               name: "linksClicked",
                               parameters: {'social': 'GitHub'});
-                          html.window.open(
-                              'https://www.github.com/morekaccino', "_blank");
+                          launch('https://www.github.com/morekaccino');
+
                         },
                         icon: const Icon(
                           SimpleIcons.github,
@@ -78,9 +78,8 @@ class _InfoCardWidgetState extends State<InfoCardWidget> {
                           await analytics.logEvent(
                               name: "linksClicked",
                               parameters: {'social': 'LinkedIn'});
-                          html.window.open(
-                              'https://www.linkedin.com/in/mowhamadrexa/',
-                              "_blank");
+                          launch('https://www.linkedin.com/in/mowhamadrexa/');
+
                         },
                         icon: const Icon(
                           SimpleIcons.linkedin,
@@ -91,12 +90,11 @@ class _InfoCardWidgetState extends State<InfoCardWidget> {
                         onPressed: () async {
                           await analytics.logEvent(
                               name: "linksClicked",
-                              parameters: {'social': 'Twitter'});
-                          html.window
-                              .open('https://twitter.com/_Moreka_', "_blank");
+                              parameters: {'social': 'Instagram'});
+                          launch('https://instagram.com/morekaccino');
                         },
                         icon: const Icon(
-                          SimpleIcons.twitter,
+                          SimpleIcons.instagram,
                           color: Colors.black54,
                         ),
                       ),
@@ -105,8 +103,7 @@ class _InfoCardWidgetState extends State<InfoCardWidget> {
                           await analytics.logEvent(
                               name: "linksClicked",
                               parameters: {'social': 'Telegram'});
-                          html.window
-                              .open('http://t.me/morekaccino', "_blank");
+                          launch('http://t.me/morekaccino');
                         },
                         icon: const Icon(
                           SimpleIcons.telegram,

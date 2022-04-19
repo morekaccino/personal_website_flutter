@@ -3,7 +3,6 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:personal_website_flutter/card_widget.dart';
 import 'package:firebase_core/firebase_core.dart';
-import 'package:firebase_analytics/firebase_analytics.dart';
 
 import 'bubble_background.dart';
 
@@ -123,63 +122,13 @@ class _MyHomePageState extends State<MyHomePage> {
               screenWidth: screenWidth,
               screenHeight: screenHeight,
               color: _colors[4]),
-          Bubble(
-              duration: _duration,
-              screenWidth: screenWidth,
-              screenHeight: screenHeight,
-              color: _colors[0]),
-          Bubble(
-              duration: _duration,
-              screenWidth: screenWidth,
-              screenHeight: screenHeight,
-              color: _colors[1]),
-          Bubble(
-              duration: _duration,
-              screenWidth: screenWidth,
-              screenHeight: screenHeight,
-              color: _colors[2]),
-          Bubble(
-              duration: _duration,
-              screenWidth: screenWidth,
-              screenHeight: screenHeight,
-              color: _colors[3]),
-          Bubble(
-              duration: _duration,
-              screenWidth: screenWidth,
-              screenHeight: screenHeight,
-              color: _colors[4]),
-          Bubble(
-              duration: _duration,
-              screenWidth: screenWidth,
-              screenHeight: screenHeight,
-              color: _colors[0]),
-          Bubble(
-              duration: _duration,
-              screenWidth: screenWidth,
-              screenHeight: screenHeight,
-              color: _colors[1]),
-          Bubble(
-              duration: _duration,
-              screenWidth: screenWidth,
-              screenHeight: screenHeight,
-              color: _colors[2]),
-          Bubble(
-              duration: _duration,
-              screenWidth: screenWidth,
-              screenHeight: screenHeight,
-              color: _colors[3]),
-          Bubble(
-              duration: _duration,
-              screenWidth: screenWidth,
-              screenHeight: screenHeight,
-              color: _colors[4]),
           Positioned(
             left: 0,
             top: 0,
             child: BackdropFilter(
               filter: ImageFilter.blur(sigmaY: 70, sigmaX: 70),
               child: Container(
-                color: const Color(0xffffffff).withOpacity(.1),
+                color: const Color(0xffffffff).withOpacity(.2),
                 height: screenHeight,
                 width: screenWidth,
                 child: SafeArea(

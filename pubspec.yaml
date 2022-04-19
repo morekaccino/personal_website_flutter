@@ -37,6 +37,7 @@ dependencies:
   simple_icons: ^6.1.0
   firebase:
   firebase_analytics:
+  url_launcher: ^6.0.18
 
 dev_dependencies:
   flutter_test:

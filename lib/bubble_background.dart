@@ -24,20 +24,25 @@ class Bubble extends StatefulWidget {
 }
 
 class _BubbleState extends State<Bubble> {
+  double division_factor = 1.5;
   @override
   Widget build(BuildContext context) {
+    if (widget.screenWidth > 1000)
+      division_factor = 3;
     return AnimatedPositioned(
       duration: widget._duration,
-      left: (Random().nextDouble() * 3 * widget.screenWidth) - widget.screenWidth,
-      top: (Random().nextDouble() * 3 * widget.screenHeight) - widget.screenWidth,
+      curve: Curves.linear,
+      left:
+      (Random().nextDouble() * (8/5) * widget.screenWidth) - widget.screenWidth,
+      top: (Random().nextDouble() * (widget.screenHeight + (2/5) * widget.screenWidth)) - ((2/5) * widget.screenWidth),
       child: AnimatedContainer(
         duration: widget._duration,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(1000 * Random().nextDouble()),
           color: widget._color.withOpacity(1),
         ),
-        height: (Random().nextDouble() + .3) * widget.screenWidth / 2,
-        width: (Random().nextDouble() + .3) * widget.screenWidth / 2,
+        height: (Random().nextDouble() + .5) * widget.screenWidth / division_factor,
+        width: (Random().nextDouble() + .5) * widget.screenWidth / division_factor,
       ),
     );
   }
