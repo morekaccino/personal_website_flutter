@@ -28,7 +28,7 @@ class _BubbleState extends State<Bubble> {
   @override
   Widget build(BuildContext context) {
     if (widget.screenWidth > 1000)
-      division_factor = 3;
+      division_factor = 2.3;
     return AnimatedPositioned(
       duration: widget._duration,
       curve: Curves.linear,

@@ -29,7 +29,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Mohamad Kazemi',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        useMaterial3: true,
       ),
       home: Scaffold(body: MyHomePage()),
     );
@@ -44,14 +44,16 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  final Duration _duration = const Duration(seconds: 50);
+  final Duration _duration = const Duration(seconds: 30);
 
   final _colors = const <Color>[
-    Color(0xff260101),
-    Color(0xff8C594D),
-    Color(0xffD9A08B),
-    Color(0xffF2CCB6),
-    Color(0xff828181),
+    Color(0xffC7877D),
+    Color(0xff505BCD),
+    Color(0xffCBAABB),
+    Color(0xff583C79),
+    Color(0xff271844),
+    Color(0xff7772C9),
+    Color(0xff4b052f),
   ];
 
   @override
@@ -68,7 +70,7 @@ class _MyHomePageState extends State<MyHomePage> {
     var screenWidth = MediaQuery.of(context).size.width;
 
     return Container(
-      color: const Color(0xffA4B8BF),
+      color: const Color(0xff100A2F),
       child: Stack(
         fit: StackFit.expand,
         children: [
@@ -101,6 +103,16 @@ class _MyHomePageState extends State<MyHomePage> {
               duration: _duration,
               screenWidth: screenWidth,
               screenHeight: screenHeight,
+              color: _colors[5]),
+          Bubble(
+              duration: _duration,
+              screenWidth: screenWidth,
+              screenHeight: screenHeight,
+              color: _colors[6]),
+          Bubble(
+              duration: _duration,
+              screenWidth: screenWidth,
+              screenHeight: screenHeight,
               color: _colors[0]),
           Bubble(
               duration: _duration,
@@ -122,13 +134,23 @@ class _MyHomePageState extends State<MyHomePage> {
               screenWidth: screenWidth,
               screenHeight: screenHeight,
               color: _colors[4]),
+          Bubble(
+              duration: _duration,
+              screenWidth: screenWidth,
+              screenHeight: screenHeight,
+              color: _colors[5]),
+          Bubble(
+              duration: _duration,
+              screenWidth: screenWidth,
+              screenHeight: screenHeight,
+              color: _colors[6]),
           Positioned(
             left: 0,
             top: 0,
             child: BackdropFilter(
               filter: ImageFilter.blur(sigmaY: 70, sigmaX: 70),
               child: Container(
-                color: const Color(0xffffffff).withOpacity(.2),
+                color: const Color(0xff000000).withOpacity(.5),
                 height: screenHeight,
                 width: screenWidth,
                 child: SafeArea(
