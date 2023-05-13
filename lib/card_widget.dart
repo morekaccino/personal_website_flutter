@@ -51,26 +51,42 @@ class _InfoCardWidgetState extends State<InfoCardWidget> {
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  const SizedBox(height: 40,),
-                  // const Center(
-                  //   child: CircleAvatar(
-                  //     radius: 70,
-                  //     backgroundImage: AssetImage("images/avatar.jpeg",),
-                  //     backgroundColor: Colors.transparent,
-                  //   ),
-                  // ),
-                  const Text(
-                    "Mohamad Kazemi",
-                    style: TextStyle(
-                        fontFamily: "Pevanytta",
-                        color: Colors.white,
-                        fontSize: 45),
+                  Padding(
+                    padding: EdgeInsets.all(40.0),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        const Center(
+                          child: CircleAvatar(
+                            radius: 40,
+                            backgroundImage: AssetImage(
+                              "images/me.JPG",
+                            ),
+                            backgroundColor: Colors.transparent,
+                          ),
+                        ),
+                        const SizedBox(
+                          width: 20,
+                        ),
+                        Flexible(
+                          child: FittedBox(
+                            child: Text("Mohamad Kazemi",
+                                style: GoogleFonts.ubuntu(
+                                  fontSize: 400,
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.bold,
+                                )),
+                          ),
+                        ),
+                      ],
+                    ),
                   ),
                   Padding(
-                    padding: const EdgeInsets.all(40.0),
+                    padding: const EdgeInsets.only(left: 40.0, right: 40.0, bottom: 40.0),
                     child: Text(
                       "Hi, I'm Mohamad! I love computers, programming, and aviation. I enjoy solving problems and learning new things.",
-                      style: GoogleFonts.ubuntu(color: Colors.white38, fontSize: 20),
+                      style: GoogleFonts.ubuntu(
+                          color: Colors.white70, fontSize: 20),
                     ),
                   ),
                   Row(
@@ -89,7 +105,7 @@ class _InfoCardWidgetState extends State<InfoCardWidget> {
                           },
                           icon: const Icon(
                             SimpleIcons.github,
-                            color: Colors.white38,
+                            color: Colors.white,
                           ),
                         ),
                       ),
@@ -105,7 +121,7 @@ class _InfoCardWidgetState extends State<InfoCardWidget> {
                           },
                           icon: const Icon(
                             SimpleIcons.linkedin,
-                            color: Colors.white38,
+                            color: Colors.white,
                           ),
                         ),
                       ),
@@ -116,34 +132,20 @@ class _InfoCardWidgetState extends State<InfoCardWidget> {
                           onPressed: () async {
                             await analytics.logEvent(
                                 name: "linksClicked",
-                                parameters: {'social': 'email'});
-                            launch('mailto:mrkazemi95@gmail.com');
+                                parameters: {'social': 'twitter'});
+                            launch('https://twitter.com/_moreka_');
                           },
                           icon: const Icon(
-                            SimpleIcons.gmail,
-                            color: Colors.white38,
+                            SimpleIcons.twitter,
+                            color: Colors.white,
                           ),
                         ),
                       ),
-                      // Container(
-                      //   width: 50,
-                      //   height: 50,
-                      //   child: IconButton(
-                      //     onPressed: () async {
-                      //       await analytics.logEvent(
-                      //           name: "linksClicked",
-                      //           parameters: {'social': 'Telegram'});
-                      //       launch('http://t.me/morekaccino');
-                      //     },
-                      //     icon: const Icon(
-                      //       SimpleIcons.telegram,
-                      //       color: Colors.white38,
-                      //     ),
-                      //   ),
-                      // ),
                     ],
                   ),
-                  const SizedBox(height: 40,),
+                  const SizedBox(
+                    height: 40,
+                  ),
                 ],
               ),
             ),

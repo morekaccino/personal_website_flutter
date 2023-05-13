@@ -47,13 +47,13 @@ class _MyHomePageState extends State<MyHomePage> {
   final Duration _duration = const Duration(seconds: 30);
 
   final _colors = const <Color>[
-    Color(0xffC7877D),
-    Color(0xff505BCD),
+    Color(0xffCE84A3),
+    Color(0xff694D8C),
     Color(0xffCBAABB),
     Color(0xff583C79),
-    Color(0xff271844),
-    Color(0xff7772C9),
-    Color(0xff4b052f),
+    Color(0xffDAA0A7),
+    Color(0xff688AC8),
+    Color(0xff2F74B0),
   ];
 
   @override
@@ -70,7 +70,7 @@ class _MyHomePageState extends State<MyHomePage> {
     var screenWidth = MediaQuery.of(context).size.width;
 
     return Container(
-      color: const Color(0xff100A2F),
+      color: const Color(0xff3060a8),
       child: Stack(
         fit: StackFit.expand,
         children: [
@@ -150,7 +150,7 @@ class _MyHomePageState extends State<MyHomePage> {
             child: BackdropFilter(
               filter: ImageFilter.blur(sigmaY: 70, sigmaX: 70),
               child: Container(
-                color: const Color(0xff000000).withOpacity(.5),
+                color: const Color(0xff000000).withOpacity(.2),
                 height: screenHeight,
                 width: screenWidth,
                 child: SafeArea(
