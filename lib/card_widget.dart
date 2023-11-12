@@ -70,7 +70,7 @@ class _InfoCardWidgetState extends State<InfoCardWidget> {
                         ),
                         Flexible(
                           child: FittedBox(
-                            child: Text("Mohamad Kazemi",
+                            child: Text("Mohamad Reza",
                                 style: GoogleFonts.ubuntu(
                                   fontSize: 400,
                                   color: Colors.white,
@@ -84,7 +84,7 @@ class _InfoCardWidgetState extends State<InfoCardWidget> {
                   Padding(
                     padding: const EdgeInsets.only(left: 40.0, right: 40.0, bottom: 40.0),
                     child: Text(
-                      "Hi, I'm Mohamad! I love computers, programming, and aviation. I enjoy solving problems and learning new things.",
+                      "I'm a programmer, wannabe cat owner, salsa dancer, guitar player, and aviation enthusiast.\nBut not necessarily in that order.",
                       style: GoogleFonts.ubuntu(
                           color: Colors.white70, fontSize: 20),
                     ),
@@ -101,10 +101,10 @@ class _InfoCardWidgetState extends State<InfoCardWidget> {
                             await analytics.logEvent(
                                 name: "linksClicked",
                                 parameters: {'social': 'GitHub'});
-                            launch('https://www.github.com/morekaccino');
+                            launch('https://www.instagram.com/morekaccino');
                           },
                           icon: const Icon(
-                            SimpleIcons.github,
+                            SimpleIcons.instagram,
                             color: Colors.white,
                           ),
                         ),
@@ -116,11 +116,11 @@ class _InfoCardWidgetState extends State<InfoCardWidget> {
                           onPressed: () async {
                             await analytics.logEvent(
                                 name: "linksClicked",
-                                parameters: {'social': 'LinkedIn'});
-                            launch('https://www.linkedin.com/in/mowhamadrexa/');
+                                parameters: {'social': 'TikTok'});
+                            launch('https://www.tiktok.com/@morekaccino');
                           },
                           icon: const Icon(
-                            SimpleIcons.linkedin,
+                            SimpleIcons.tiktok,
                             color: Colors.white,
                           ),
                         ),
@@ -132,11 +132,11 @@ class _InfoCardWidgetState extends State<InfoCardWidget> {
                           onPressed: () async {
                             await analytics.logEvent(
                                 name: "linksClicked",
-                                parameters: {'social': 'twitter'});
-                            launch('https://twitter.com/_moreka_');
+                                parameters: {'social': 'email'});
+                            launch('mailto:contact@mrkazemi.com');
                           },
                           icon: const Icon(
-                            SimpleIcons.twitter,
+                            SimpleIcons.gmail,
                             color: Colors.white,
                           ),
                         ),
