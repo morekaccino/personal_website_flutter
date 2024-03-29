@@ -70,9 +70,9 @@ class _InfoCardWidgetState extends State<InfoCardWidget> {
                         ),
                         Flexible(
                           child: FittedBox(
-                            child: Text("Mohamad Reza",
+                            child: Text("Mohamad",
                                 style: GoogleFonts.ubuntu(
-                                  fontSize: 400,
+                                  fontSize: 300,
                                   color: Colors.white,
                                   fontWeight: FontWeight.bold,
                                 )),
@@ -100,11 +100,11 @@ class _InfoCardWidgetState extends State<InfoCardWidget> {
                           onPressed: () async {
                             await analytics.logEvent(
                                 name: "linksClicked",
-                                parameters: {'social': 'GitHub'});
-                            launch('https://www.instagram.com/morekaccino');
+                                parameters: {'social': 'hackerrank'});
+                            launch('https://www.hackerrank.com/profile/morekaccino');
                           },
                           icon: const Icon(
-                            SimpleIcons.instagram,
+                            SimpleIcons.hackerrank,
                             color: Colors.white,
                           ),
                         ),
@@ -116,11 +116,11 @@ class _InfoCardWidgetState extends State<InfoCardWidget> {
                           onPressed: () async {
                             await analytics.logEvent(
                                 name: "linksClicked",
-                                parameters: {'social': 'TikTok'});
-                            launch('https://www.tiktok.com/@morekaccino');
+                                parameters: {'social': 'linkedin'});
+                            launch('https://www.linkedin.com/in/moreka/');
                           },
                           icon: const Icon(
-                            SimpleIcons.tiktok,
+                            SimpleIcons.linkedin,
                             color: Colors.white,
                           ),
                         ),
